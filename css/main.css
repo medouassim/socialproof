@@ -1,0 +1,163 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Spartan;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: 0 , 18rem;
+}
+
+h1 {
+  font-size: 2.7rem;
+  color: #502050;
+  font-family: Spartan;
+  font-weight: 700;
+}
+
+.products {
+  width: 30rem;
+  padding-left: 8rem;
+}
+
+.products p {
+  color: #937b92;
+}
+
+.stars {
+  padding-top: 2rem;
+}
+
+.stars p:not(span) {
+  color: #502050;
+  margin-top: 1rem;
+}
+
+.stars p span {
+  margin-right: 1.5rem;
+}
+
+.stars p span span {
+  color: gold;
+  margin: 2px;
+}
+
+.stars p {
+  background-color: #f7f2f7;
+  padding: .8rem 3rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: .8rem;
+}
+
+.stars p:first-child {
+  position: relative;
+  left: 3rem;
+}
+
+.stars p:nth-child(2) {
+  position: relative;
+  left: 6rem;
+}
+
+.stars p:nth-child(3) {
+  position: relative;
+  left: 9rem;
+}
+
+.first {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.sections {
+  display: flex;
+  margin: 1rem 7rem;
+}
+
+.sections div {
+  background-color: #502050;
+  margin: 0 1rem;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 5px;
+  height: 10rem;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.sections div img {
+  border-radius: 50%;
+  width: 3rem;
+  display: inline;
+  margin-right: 1rem;
+}
+
+.sections div h4 {
+  display: inline-block;
+}
+
+.sections div h4 span {
+  color: #ee68a4;
+}
+
+.sections div p {
+  display: inline-block;
+  line-height: 1.5rem;
+}
+
+.sections div:nth-child(2) {
+  margin-top: 3rem;
+}
+
+.sections div:last-child {
+  margin-top: 6rem;
+}
+
+.attribution {
+  padding: 1rem 2rem;
+  background-color: #502050;
+  color: white;
+}
+
+.attribution a {
+  color: #ee68a4;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-position: top left, bottom right;
+  }
+  .products {
+    padding: 0;
+    margin: 0;
+  }
+  .products h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .products p {
+    margin: 1rem 1rem;
+    text-align: center;
+  }
+  .stars p {
+    left: 14% !important;
+    padding: 1.5rem;
+  }
+  .sections {
+    flex-direction: column;
+    margin: 0 2rem;
+    margin-bottom: 1rem;
+  }
+  .sections div {
+    margin-top: 2rem !important;
+  }
+  .sections div p {
+    line-height: 1rem;
+  }
+}

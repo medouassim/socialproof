@@ -1,0 +1,160 @@
+@import './css/variables';
+
+@function weight($font-weight) {
+    @return map-get($font-weights, $font-weight)
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Spartan;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('/images/bg-pattern-top-desktop.svg'), url('/images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: 0 , 18rem;
+}
+h1 {
+    font-size: 2.7rem;
+    color: $primary-color;
+    font-family: Spartan;
+    font-weight: weight(bold);
+}
+.products {
+    width: 30rem;
+    padding-left: 8rem;
+    p {
+        color: $dark-color;
+        
+    }
+}
+.stars {
+    padding-top: 2rem;
+    p:not(span){
+        color: $primary-color;
+        margin-top: 1rem;
+    }
+    p span  {
+        margin-right: 1.5rem;
+        span{
+            color: gold;
+            margin: 2px;
+        }
+        
+    }
+    p {
+        background-color: $light-color;
+        padding: .8rem 3rem;
+        border-radius: 6px;
+        font-weight: weight(bold);
+        font-size: .8rem;
+    }
+    p:first-child {
+        position: relative;
+        left: 3rem;
+    }
+    p:nth-child(2) {
+        position: relative;
+        left: 6rem;
+    }
+    p:nth-child(3) {
+        position: relative;
+        left: 9rem;
+    }
+}
+.first{
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+.sections {
+    display: flex;
+    margin: 1rem 7rem;
+    
+    div{
+        background-color: $primary-color;
+        margin: 0 1rem;
+        color: $white-color;
+        padding: 2.5rem;
+        border-radius: 5px;
+        height: 10rem;
+        font-weight: weight(regular);
+        img{
+            border-radius: 50%;
+            width: 3rem;
+            display: inline;
+            margin-right: 1rem;
+            
+        }
+        font-size: 10px;
+        h4  {
+            display: inline-block;
+            
+            span{
+                color: $secondary-color;
+                
+            }
+        }
+        p {
+            display: inline-block;
+            line-height: 1.5rem;
+        }
+    }
+    div:nth-child(2) {
+        margin-top: 3rem;
+    }
+    div:last-child {
+        margin-top: 6rem;
+    }
+}
+.attribution {
+    padding: 1rem 2rem;
+    background-color: $primary-color;
+    color: $white-color;
+    a {
+        color: $secondary-color;
+    }
+}
+@media(max-width: 500px) {
+    body {
+        background-position: top left, bottom right;
+    }
+    .products {
+        padding: 0;
+        margin: 0;
+        h1 {
+            text-align: center;
+            margin: 0 auto;
+            
+        }
+        p {
+            margin: 1rem 1rem;
+            text-align: center;
+            
+        }
+
+    }
+    .stars {
+        
+        p {
+            left: 14% !important;
+            padding: 1.5rem ;
+            
+        }
+    }
+    .sections {
+        flex-direction: column;
+        margin: 0 2rem;
+        margin-bottom: 1rem;
+        div {
+            margin-top: 2rem !important;
+            p {
+                line-height: 1rem;
+            }
+        }
+    }
+}
+
