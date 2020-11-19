@@ -129,7 +129,7 @@ h1 {
   color: #ee68a4;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 375px) {
   body {
     background-position: top left, bottom right;
   }
